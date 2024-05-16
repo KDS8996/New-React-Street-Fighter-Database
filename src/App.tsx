@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, HashRouter, } from 'react-router-dom'
 import routes from './config/routes'
 import Navbar from './components/Navbar'
 import { Provider } from 'react-redux'
@@ -9,7 +9,7 @@ import AuthChecker from './auth/AuthChecker'
 function App() {
 
   return (
-    <BrowserRouter> {/* change to hashrouter before hosting */}
+    <HashRouter> {/* change to hashrouter before hosting */}
       <Navbar />
       <Provider store={store}> 
         <Routes>
@@ -30,7 +30,7 @@ function App() {
           )) }
         </Routes>
       </Provider>
-    </BrowserRouter>
+    </HashRouter>
   )
 
 }
